@@ -9,5 +9,5 @@ jobs:
         with:
           node-version: 18
       - name: Authenticate with private NPM package
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
       - run: npm ci
