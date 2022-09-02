@@ -1,0 +1,16 @@
+{
+  "name": "@jamieswhiteshirt/naive-consumer",
+  "version": "1.0.0",
+  "description": "A naive package consumer",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "uvu"
+  },
+  "bin": "./index.js",
+  "author": "JamiesWhiteShirt",
+  "license": "ISC",
+  "devDependencies": {
+    "uvu": "^0.5.6"
+  }
+}
