@@ -1,0 +1,14 @@
+{
+  "name": "@jamieswhiteshirt/naive-consumer",
+  "version": "1.0.0",
+  "description": "A naive package consumer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JamiesWhiteShirt",
+  "license": "ISC",
+  "dependencies": {
+    "@jamieswhiteshirt/suspicious-package": "^1.0.0"
+  }
+}
