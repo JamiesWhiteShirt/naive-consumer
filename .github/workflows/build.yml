@@ -8,6 +8,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Authenticate with private NPM package
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          cache: npm
+          registry-url: "https://npm.pkg.github.com/"
+          scope: "@jamieswhiteshirt"
       - run: npm ci
+        env:
+          # NODE_AUTH_TOKEN is referenced from .npmrc, as configured by setup-node
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
