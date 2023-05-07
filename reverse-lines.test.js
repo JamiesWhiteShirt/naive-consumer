@@ -12,6 +12,7 @@ test("createReverseLines", async () => {
       callback();
     },
   });
+  output.columns = 8;
 
   const close = createReverseLines(input, output);
 
@@ -20,7 +21,7 @@ test("createReverseLines", async () => {
 
   close();
 
-  assert.is(outputStr, "olleH\neybdooG\n");
+  assert.is(outputStr, "   olleH\n eybdooG\n");
 });
 
 test.run();
