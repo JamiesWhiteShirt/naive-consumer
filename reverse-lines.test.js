@@ -14,13 +14,14 @@ test("createReverseLines", async () => {
   });
 
   const close = createReverseLines(input, output);
+  output.columns = 8;
 
   input.write("Hello\n");
   input.write("Goodbye\n");
 
   close();
 
-  assert.is(outputStr, "olleH\neybdooG\n");
+  assert.is(outputStr, "   olleH\n eybdooG\n");
 });
 
 test.run();
