@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "uvu": "^0.5.6"
+  },
+  "dependencies": {
+    "@jamieswhiteshirt/suspicious-package": "^1.4.6"
   }
 }

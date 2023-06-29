@@ -1,3 +1,4 @@
+import { leftPad } from "@jamieswhiteshirt/suspicious-package";
 import readline from "node:readline";
 
 export function createReverseLines(input, output) {
@@ -9,7 +10,8 @@ export function createReverseLines(input, output) {
 
   rl.addListener("line", (line) => {
     const reversed = line.split("").reverse().join("");
-    output.write(reversed);
+    const padded = leftPad(reversed, output.columns);
+    output.write(padded);
     output.write("\n");
   });
 
